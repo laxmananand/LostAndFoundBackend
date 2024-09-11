@@ -98,4 +98,8 @@ function dbConnection() {
 app.use("/", routes);
 app.use("/", category);
 
+app.get("/", (req, res) => {
+  res.status(200).send("Server is running !");
+});
+
 app.listen(port, () => console.log(`Listening to port ${port} !!`));
